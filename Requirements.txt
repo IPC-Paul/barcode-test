@@ -1,0 +1,30 @@
+Phase 1:
+	Read barcode using an authorized iOS phone or tablet
+		Authorization is per device / user / IP Addresses - TBD
+		Camera selection: front/rear/external
+		Manual entry for bar codes deemed unreadable
+		Disable auto-sleep mode on device through app to maintain efficiency
+	Pass voucher data to server
+	Check if the voucher is valid and if it has been redeemed
+		If the voucher is invalid or has been used: Print the result and refuse redemption.
+	Create a temporary key for tracking redemption
+		unique key ensures voucher is not used multiple times before final submission
+	Return movie list for the current day to device
+		showtime logic can be server side or on the device, both work
+	Movies selected from drop-down/scrolling menus for movie and times
+	Number of tickets redeemed entered
+	Submitting redemption data checks session key against server
+		Mismatched key: return failure message to device explaining that redemption was attempted elsewhere
+	Store redemption data in member database Tracking tab to maintain human-readable records visible in Freedom
+	“Success” message sent to device with approval for granting tickets
+
+Phase 2:
+	Query and cache movie data independent of voucher redemption
+		Refresh cache automatically at regular interval
+		“Force refresh” button in app
+	If there is no server response cache submission and approve redemption
+		Add flag to submission stating it has been queued for submission
+		Queued submission(s) retry connection at regular intervals in asynchronous background thread
+	If a queued submission is rejected:
+		Track additional redemption and quietly alert device in a background/secondary view
+		Track redemption in Tracking tab and flag/notify admin to review for abuse

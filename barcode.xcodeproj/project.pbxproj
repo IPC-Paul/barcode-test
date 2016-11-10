@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DAC5A6C51DD4F56600219602 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC5A6C41DD4F56600219602 /* AppDelegate.swift */; };
-		DAC5A6C71DD4F56600219602 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC5A6C61DD4F56600219602 /* ViewController.swift */; };
+		DAC5A6C71DD4F56600219602 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC5A6C61DD4F56600219602 /* ScannerViewController.swift */; };
 		DAC5A6CA1DD4F56600219602 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC5A6C81DD4F56600219602 /* Main.storyboard */; };
 		DAC5A6CD1DD4F56600219602 /* barcode.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DAC5A6CB1DD4F56600219602 /* barcode.xcdatamodeld */; };
 		DAC5A6CF1DD4F56600219602 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC5A6CE1DD4F56600219602 /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		DAC5A6C11DD4F56600219602 /* barcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC5A6C41DD4F56600219602 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DAC5A6C61DD4F56600219602 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAC5A6C61DD4F56600219602 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		DAC5A6C91DD4F56600219602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAC5A6CC1DD4F56600219602 /* barcode.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = barcode.xcdatamodel; sourceTree = "<group>"; };
 		DAC5A6CE1DD4F56600219602 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				DAC5A6C41DD4F56600219602 /* AppDelegate.swift */,
-				DAC5A6C61DD4F56600219602 /* ViewController.swift */,
+				DAC5A6C61DD4F56600219602 /* ScannerViewController.swift */,
 				DAC5A6C81DD4F56600219602 /* Main.storyboard */,
 				DAC5A6CE1DD4F56600219602 /* Assets.xcassets */,
 				DAC5A6D01DD4F56600219602 /* LaunchScreen.storyboard */,
@@ -99,6 +99,7 @@
 				TargetAttributes = {
 					DAC5A6C01DD4F56500219602 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = WX4PJA7CCW;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -139,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAC5A6C71DD4F56600219602 /* ViewController.swift in Sources */,
+				DAC5A6C71DD4F56600219602 /* ScannerViewController.swift in Sources */,
 				DAC5A6CD1DD4F56600219602 /* barcode.xcdatamodeld in Sources */,
 				DAC5A6C51DD4F56600219602 /* AppDelegate.swift in Sources */,
 			);
@@ -264,11 +265,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WX4PJA7CCW;
 				INFOPLIST_FILE = barcode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teamipc.barcode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -276,11 +279,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WX4PJA7CCW;
 				INFOPLIST_FILE = barcode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teamipc.barcode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
