@@ -28,3 +28,9 @@ Phase 2:
 	If a queued submission is rejected:
 		Track additional redemption and quietly alert device in a background/secondary view
 		Track redemption in Tracking tab and flag/notify admin to review for abuse
+
+
+
+Member authentication
+	lookup members via partial email / partial last name
+
