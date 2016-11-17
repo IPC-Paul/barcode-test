@@ -88,11 +88,28 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
 			found(code: readableObject.stringValue);
 		}
 		
-		dismiss(animated: true)
+		//dismiss(animated: true)
 	}
 	
 	func found(code: String) {
 		print(code)
+		
+		let alertBarcode = UIAlertController(title: "Found Bar Code", message: code, preferredStyle: UIAlertControllerStyle.alert)
+		
+		let correctAction = UIAlertAction(title: "Okay", style: UIAlertActionStyle.default) {
+			UIAlertAction in
+			print("ok")
+		}
+		let failAction = UIAlertAction(title: "Retry", style: UIAlertActionStyle.destructive) {
+			UIAlertAction in
+			print("retry")
+			self.captureSession.startRunning()
+		}
+		
+		alertBarcode.addAction(failAction)
+		alertBarcode.addAction(correctAction)
+		
+		present(alertBarcode, animated: true, completion: nil)
 	}
 	
 	override var prefersStatusBarHidden: Bool {
